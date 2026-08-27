@@ -127,11 +127,11 @@ git clone <템플릿-저장소-URL>
 cd <템플릿-저장소-URL>
 rm -rf .git
 git init
-git remote add origin <본인-저장소-URL>
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git push -u origin main
+git remote add origin <본인-저장소-URL> // 이 파일을 내 git과 연결하겠다.
+git add . // 내 파일 전부 추가 한 것
+git commit -m "Initial commit" // 내가 이 파일에 수정하고 commit 하면 git에 올라감.
+git branch -M main // branch는 여기에 올릴게라는 뜻
+git push -u origin main //push를 해야 웹사이트에 올라감.
 ```
 
 ## 📝 문제 풀이 방법
