@@ -34,6 +34,27 @@ def is_palindrome(s):
     Returns:
         bool: 회문이면 True, 아니면 False
     """
+    
+    # 정리한 글자를 저장할 빈 문자열을 만든다
+    text = ""
+
+    # 문자열을 한 글자씩 확인한다
+    for char in s:
+
+        # 알파벳이나 숫자인지 확인한다
+        if char.isalnum():
+
+            # 소문자로 바꾼 후 text에 추가한다
+            text = text + char.lower()
+
+    # text를 뒤집는다
+    reverse_text = text[::-1]
+
+    # 두 문자열이 같은지 확인한다
+    if text == reverse_text:
+        return True
+    else:
+        return False
     # TODO: 알파벳과 숫자만 남기고 소문자로 변환하세요
     # 힌트: isalnum() 메서드와 lower() 메서드 사용
     pass
@@ -73,5 +94,6 @@ if __name__ == "__main__":
     result4 = is_palindrome(test4)
     print(f"입력: \"{test4}\"")
     print(f"회문 여부: {result4}")
+
 
 
